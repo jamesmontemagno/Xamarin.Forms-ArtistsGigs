@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>32d64f35-5d1e-46b3-956a-5c7a30a654a0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ArtistGig.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Artist\Artist.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Artist\ArtistsRoot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Events\Event.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Events\EventsRoot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Events\Location.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Events\Venue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Image.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ArtistsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EventsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ArtistsView.xaml.cs">
+      <DependentUpon>ArtistsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BuyTicketPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EventsView.xaml.cs">
+      <DependentUpon>EventsView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EventsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\ArtistsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

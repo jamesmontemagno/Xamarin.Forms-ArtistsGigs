@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="ArtistGig.Shared.Views.EventsView"
+             Title="{Binding Title}">
+    <StackLayout>
+        <ActivityIndicator IsVisible="{Binding IsBusy}"
+                           IsRunning="{Binding IsBusy}"/>
+        <ListView x:Name="List"
+                  ItemsSource="{Binding Events}"
+                  SelectedItem="{Binding SelectedEvent}">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ImageCell
+                        ImageSource="{Binding MediumImage}"
+                        Text="{Binding StartDate}"
+                        Detail="{Binding Venue.Location.Display}"/>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>
